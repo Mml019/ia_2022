@@ -4,8 +4,8 @@ S'ha d'implementar el mètode:
     actua()
 """
 from ia_2022 import entorn
-from quiques.agent import Barca, Estat
-from quiques.entorn import AccionsBarca
+from ia_2022.quiques.agent import Barca, Estat
+from ia_2022.quiques.entorn import AccionsBarca
 
 
 class BarcaProfunditat(Barca):
