@@ -17,7 +17,7 @@ from queue import Empty
 
 import pygame
 
-from ia_2022.aspirador.entorn import (AccionsAspirador, ClauPercepcio, EstatHabitacio,Localitzacio)
+from aspirador.entorn import (AccionsAspirador, ClauPercepcio, EstatHabitacio,Localitzacio)
 from ia_2022 import agent
 from ia_2022 import entorn
 
