@@ -13,4 +13,21 @@ class BarcaAmplada(Barca):
     def actua(
         self, percep: entorn.Percepcio
     ) -> entorn.Accio | tuple[entorn.Accio, object]:
-        pass
+        
+        
+        
+     def cerca():   
+        estat_inicial=Estat(percep.to_dict)
+        self.__oberts=[]
+        self.__oberts.append(estat_inicial)
+        while(self.__oberts):
+            self.__oberts.remove(estat_inicial)
+            if(estat_inicial.es_meta()):
+                return self.tancat
+            else:
+
+                
+                llista=estat_inicial.genera_fill()
+                {
+                    
+                }

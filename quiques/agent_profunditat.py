@@ -5,7 +5,7 @@ S'ha d'implementar el mètode:
 """
 from ia_2022 import entorn
 from quiques.agent import Barca, Estat
-from quiques.entorn import AccionsBarca
+from quiques.entorn import AccionsBarca, ClauPercepcio
 
 
 class BarcaProfunditat(Barca):
@@ -18,4 +18,8 @@ class BarcaProfunditat(Barca):
     def actua(
             self, percep: entorn.Percepcio
     ) -> entorn.Accio | tuple[entorn.Accio, object]:
-        pass
+    
+    def cerca():
+
+    
+
