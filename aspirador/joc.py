@@ -2,10 +2,9 @@ import random
 
 import pygame
 
-from aspirador.entorn import (AccionsAspirador, ClauPercepcio, EstatHabitacio,Localitzacio)
-from ia_2022 import agent
-from ia_2022 import entorn as super_entorn
-from ia_2022 import joc
+from aspirador.entorn import (AccionsAspirador, ClauPercepcio, EstatHabitacio,
+                              Localitzacio)
+from ia_2022 import agent, entorn, joc
 
 
 class AspiradorRomput(Exception):
