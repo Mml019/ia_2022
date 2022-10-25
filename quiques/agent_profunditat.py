@@ -19,17 +19,15 @@ class BarcaProfunditat(Barca):
     def actua(
             self, percep: entorn.Percepcio
     ) -> entorn.Accio | tuple[entorn.Accio, object]:
-<<<<<<< Updated upstream
-        pass
-=======
-            estat=Estat(percep.to_dict())
-            if self.__accions is None:
-                self._cerca(estat=estat)
 
-            if self.__accions is not Empty:
-                return AccionsBarca.MOURE,self.__accions.pop()
-            else:
-                return AccionsBarca.ATURAR
+        estat=Estat(percep.to_dict())
+        if self.__accions is None:
+            self._cerca(estat=estat)
+
+        if self.__accions is not Empty:
+            return AccionsBarca.MOURE,self.__accions.pop()
+        else:
+            return AccionsBarca.ATURAR
 
     def actuaProf(self,percep):
         estat = Estat(percep.to_dict())
@@ -121,4 +119,3 @@ class BarcaProfunditat(Barca):
         else:
             return False
                 
->>>>>>> Stashed changes
