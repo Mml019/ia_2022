@@ -6,7 +6,7 @@ S'ha d'implementar el mètode:
 from queue import Empty
 from ia_2022 import entorn
 from quiques.agent import Barca, Estat
-from quiques.entorn import AccionsBarca
+from quiques.entorn import AccionsBarca, ClauPercepcio
 
 
 class BarcaProfunditat(Barca):

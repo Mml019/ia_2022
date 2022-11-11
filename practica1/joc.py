@@ -128,7 +128,6 @@ class Casella:
             img = pygame.transform.scale(img, (100, 100))
             window.blit(img, (x * 100, y * 100))
 
-
 class Laberint(joc.Joc):
     MOVS = {
         Direccio.BAIX: (0, 1),
