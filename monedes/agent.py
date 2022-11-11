@@ -8,7 +8,7 @@ Solució:
 
 from mimetypes import init
 from ia_2022 import agent, entorn
-from ia_2022.monedes.entorn import AccionsMoneda, ClauPercepcio
+from monedes.entorn import AccionsMoneda, ClauPercepcio
 
 SOLUCIO = " XXXC"
 
