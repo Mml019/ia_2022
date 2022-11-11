@@ -27,7 +27,9 @@ class Barca(agent.Agent):
         print(self._posicio_pintar)
 
     @abc.abstractmethod
-    def actua(self, percep: entorn.Percepcio) -> entorn.Accio | tuple[entorn.Accio, object]:
+    def actua(
+        self, percep: entorn.Percepcio
+    ) -> entorn.Accio | tuple[entorn.Accio, object]:
         pass
 
 
@@ -58,15 +60,15 @@ class Estat:
     def __eq__(self, other):
         """Overrides the default implementation"""
         return (
-                self[ClauPercepcio.QUICA_ESQ] == other[ClauPercepcio.QUICA_ESQ]
-                and self[ClauPercepcio.QUICA_DRETA] == other[ClauPercepcio.QUICA_DRETA]
-                and self[ClauPercepcio.LLOP_ESQ] == other[ClauPercepcio.LLOP_ESQ]
-                and self[ClauPercepcio.LLOP_DRETA] == other[ClauPercepcio.LLOP_DRETA]
-                and self[ClauPercepcio.LLOC] == other[ClauPercepcio.LLOC]
+            self[ClauPercepcio.QUICA_ESQ] == other[ClauPercepcio.QUICA_ESQ]
+            and self[ClauPercepcio.QUICA_DRETA] == other[ClauPercepcio.QUICA_DRETA]
+            and self[ClauPercepcio.LLOP_ESQ] == other[ClauPercepcio.LLOP_ESQ]
+            and self[ClauPercepcio.LLOP_DRETA] == other[ClauPercepcio.LLOP_DRETA]
+            and self[ClauPercepcio.LLOC] == other[ClauPercepcio.LLOC]
         )
 
     def legal(self) -> bool:
-        """ Mètode per detectar si un estat és legal.
+        """Mètode per detectar si un estat és legal.
 
         Un estat és legal si no hi ha cap valor negatiu.
 
@@ -89,15 +91,15 @@ class Estat:
 
     def es_segur(self) -> bool:
         return (
-                       self[ClauPercepcio.QUICA_ESQ] >= self[ClauPercepcio.LLOP_ESQ]
-                       or self[ClauPercepcio.QUICA_ESQ] == 0
-               ) and (
-                       self[ClauPercepcio.QUICA_DRETA] >= self[ClauPercepcio.LLOP_DRETA]
-                       or self[ClauPercepcio.QUICA_DRETA] == 0
-               )
+            self[ClauPercepcio.QUICA_ESQ] >= self[ClauPercepcio.LLOP_ESQ]
+            or self[ClauPercepcio.QUICA_ESQ] == 0
+        ) and (
+            self[ClauPercepcio.QUICA_DRETA] >= self[ClauPercepcio.LLOP_DRETA]
+            or self[ClauPercepcio.QUICA_DRETA] == 0
+        )
 
     def genera_fill(self) -> list:
-        """ Mètode per generar els estats fills.
+        """Mètode per generar els estats fills.
 
         Genera tots els estats fill a partir de l'estat actual.
 
