@@ -95,7 +95,7 @@ class BarcaAmplada(Barca):
         estat = Estat(percep.to_dict())
         
         if self.__accions is None:
-            self._cerca(estat=estat)
+            self._cercaProf(estat=estat)
 
         if len(self.__accions) > 0:
             return AccionsBarca.MOURE, self.__accions.pop()
